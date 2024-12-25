@@ -1,0 +1,227 @@
+/* google fonts  */
+@import url("https://fonts.googleapis.com/css2?family=Gwendolyn:wght@700&family=Montserrat:wght@400;700&display=swap");
+
+:root {
+  --body-font: "Montserrat", sans-serif;
+  --alt-font: "Gwendolyn", cursive;
+  --dark-color: hsl(151, 52%, 17%);
+  --darker-color: hsl(151, 52%, 12%);
+  --first-color: hsl(72, 59%, 45%);
+  --title-color: hsl(49, 96%, 91%);
+  --alt-title: hsl(99, 20%, 65%);
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: var(--dark-color);
+  font-family: var(--body-font);
+  position: relative;
+}
+/* the starting of the header section */
+header {
+  width: 100%;
+  background-color: transparent;
+}
+header .container {
+  width: calc(100% - 20%);
+  margin: auto;
+  padding: 2rem 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+header .container .logo h3 span {
+  display: block;
+  font-family: var(--alt-font);
+  font-size: 4.2rem;
+  color: var(--alt-title);
+  margin-bottom: -0.2rem;
+}
+header .container .logo h3 {
+  font-size: 2rem;
+  color: var(--title-color);
+}
+header .container .nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 2rem;
+  font-weight: bold;
+}
+header .container .nav ul li {
+  list-style: none;
+  color: hsl(72deg 59% 45% / 43%);
+  cursor: pointer;
+  transition: all 0.3s;
+  padding-right: 3rem;
+}
+
+header .container .nav ul li.active {
+  color: var(--title-color);
+}
+header .container .nav ul li div.active {
+  color: var(--alt-title);
+}
+
+header .container .nav li:hover {
+  color: var(--title-color);
+}
+
+header .container .nav li:hover div {
+  color: var(--alt-title);
+}
+header .container .card-container {
+  text-align: end;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+header .container .card-container .img {
+  background-color: var(--first-color);
+  width: fit-content;
+  margin-right: 2rem;
+  padding: 0.5rem;
+  border-radius: 1.3rem;
+  align-self: center;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+header .container .card-container .img::before {
+  content: "2";
+  background-color: red;
+  color: white;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -0.5rem;
+  right: -0.5rem;
+  font-weight: bold;
+}
+header .container .card-container img {
+  width: 4rem;
+  height: 4.5rem;
+}
+header .container .card-container span {
+  padding: 2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  margin-top: -1rem;
+  box-shadow: 0.1rem 0.2rem 0.2rem;
+  transition: all 0.2s;
+}
+header .container .card-container span:hover {
+  background-color: rgb(0 0 0 / 23%);
+}
+header .container .card-container span a {
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: bold;
+}
+/* the ending of the header section */
+
+/* the starting of the landing section  */
+.landing {
+  position: relative;
+  width: 100%;
+  /* min-height: 100vh; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.landing .img-holder {
+  justify-self: flex-end;
+}
+.landing .img-holder img {
+  width: 70rem;
+  height: 70rem;
+}
+/* .landing::after {
+  content: "";
+  top: 19%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--darker-color);
+  transform: rotate(43deg);
+  border-radius: 7rem;
+  left: -51%;
+  z-index: -1;
+} */
+.landing .counter {
+  width: 55rem;
+  padding-left: 2rem;
+  text-align: center;
+  justify-self: center;
+}
+.landing .counter h3 {
+  text-transform: capitalize;
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--title-color);
+  line-height: 1.5;
+  margin-bottom: -1rem;
+}
+.landing .counter h3 .number {
+  background-color: #000000a8;
+  border-radius: 50%;
+  margin-left: 1rem;
+  font-size: 2rem;
+  position: relative;
+  width: 50px;
+  display: inline-flex;
+  height: 50px;
+  justify-content: space-around;
+  align-items: center;
+}
+.landing .counter h3 .number::before {
+  content: "";
+  position: absolute;
+  top: -1rem;
+  border: 1rem solid var(--first-color);
+  width: 100%;
+  height: 100%;
+  left: -8px;
+  border-radius: 50%;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  transform: rotate(28deg);
+}
+.landing .counter p {
+  color: var(--title-color);
+  line-height: 1.6;
+  font-size: 2rem;
+}
+.landing .counter button {
+  padding: 2rem 3rem;
+  background-color: var(--first-color);
+  font-size: 2rem;
+  border-radius: 2rem;
+  color: white;
+  transition: all 0.3s;
+  box-shadow: 0.1rem 0.2rem 0.4rem rgb(0 0 0 / 48%);
+  cursor: pointer;
+}
+.landing .counter button:hover {
+  background-color: hsl(72deg 83.58% 22.81%);
+}
+.landing img[alt="bell"],
+.landing img[alt="star"] {
+  width: 6rem;
+}
+.landing img[alt="bell"] {
+  position: absolute;
+  left: 20%;
+  bottom: -11%;
+  transform: rotate(40deg);
+}
+.landing img[alt="star"] {
+  position: absolute;
+  right: 9%;
+  transform: rotate(40deg);
+}
+/* the ending of the landing section  */
